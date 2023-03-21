@@ -11,3 +11,25 @@
     <li>Ter o rails instalado(cmd=> gem install rails) </li>
     <li>seguir o passo a passo para instalar </li>
 </ul>
+
+## Passo a passo do backend
+
+### Instalar as gems
+
+```bundle install```
+
+### Criar o banco de dados
+
+```rails db:create```
+
+### Migrar o banco de dados
+
+```rails db:migrate```
+
+### Popular o banco de dados
+
+```rails db:seed```
+
+###  Subir o servidor
+
+```rails s -p 8080```

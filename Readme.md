@@ -14,7 +14,10 @@
 
 ## Passo a passo do backend
 
-### Entrar na pasta do backend <font color="red"> CMD </font>
+### Entrar na pasta do backend 
+```diff
+- CMD
+```
 
 ```cd backend```
 

@@ -14,6 +14,10 @@
 
 ## Passo a passo do backend
 
+### Entrar na pasta do backend <bold>(CMD)</bold>
+
+```cd backend```
+
 ### Instalar as gems
 
 ```bundle install```

@@ -16,7 +16,7 @@
 
 ### Entrar na pasta do backend 
 ```diff
-- CMD
+-↑↑ CMD ↑↑
 ```
 
 ```cd backend```

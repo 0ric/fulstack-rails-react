@@ -40,3 +40,20 @@
 ###  Subir o servidor
 
 ```rails s -p 8080```
+
+# FRONTEND
+
+## Passo a passo para instalar o front 
+
+### Entrar na pasta em outro cmd
+
+```cd frontend```
+
+### Instalar as dependencias
+
+```npm install```
+
+### Iniciar o front 
+
+```npm start```
+

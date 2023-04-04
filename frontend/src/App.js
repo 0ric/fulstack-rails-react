@@ -1,4 +1,5 @@
 import Ex1 from "./exemplos/function";
+import EX2 from "./exemplos/ArrowFunction"
 
 function App(){
 
@@ -16,6 +17,8 @@ return(
     <h1>Opa</h1>
 
     <Ex1/>
+
+    <EX2/>
   </>
 )
 }

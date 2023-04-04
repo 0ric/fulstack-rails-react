@@ -1,3 +1,5 @@
+import Ex1 from "./exemplos/function";
+
 function App(){
 
   const data=  {
@@ -12,6 +14,8 @@ function App(){
 return(
   <>
     <h1>Opa</h1>
+
+    <Ex1/>
   </>
 )
 }

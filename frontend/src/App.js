@@ -2,8 +2,19 @@ import Ex1 from "./exemplos/function";
 import EX2 from "./exemplos/ArrowFunction"
 import Props from "./exemplos/props/Props";
 import PropsAbistrato from "./exemplos/props/PropsAbistrato";
-function App(){
+import {useState,useEffect} from 'react';
 
+function App(){
+  const [valorInicial,FunctionParaMudarOValor] = useState("valor inicial")
+
+  function MudarValor(){
+    FunctionParaMudarOValor("mudei");
+  }
+
+  useEffect(()=>{
+    console.log("funcionei");
+  
+},[valorInicial])
   const data=  {
 		"id": 1,
 		"nome": "Kuwait City",
@@ -15,7 +26,9 @@ function App(){
 	}
 return(
   <>
-    <h1>Opa</h1>
+    <h1>Opa {valorInicial}</h1>
+
+    <button onClick={MudarValor}> Clique aqui para mudar o valor </button>
 
     <Ex1/>
 

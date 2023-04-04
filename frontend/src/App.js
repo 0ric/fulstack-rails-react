@@ -1,6 +1,7 @@
 import Ex1 from "./exemplos/function";
 import EX2 from "./exemplos/ArrowFunction"
-
+import Props from "./exemplos/props/Props";
+import PropsAbistrato from "./exemplos/props/PropsAbistrato";
 function App(){
 
   const data=  {
@@ -19,6 +20,10 @@ return(
     <Ex1/>
 
     <EX2/>
+
+    <Props numero="3" nome="ricardo" idade='21' />
+    <Props numero="5" nome="marcos" idade='17' />
+  <PropsAbistrato num1= {10} num2= {7} />
   </>
 )
 }

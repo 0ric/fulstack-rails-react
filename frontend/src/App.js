@@ -5,6 +5,8 @@ import PropsAbistrato from "./exemplos/props/PropsAbistrato";
 import {useState,useEffect} from 'react';
 
 function App(){
+  const [hide,setHide] = useState(false);
+
   const [valorInicial,FunctionParaMudarOValor] = useState("valor inicial")
 
   function MudarValor(){
@@ -30,6 +32,13 @@ return(
 
     <button onClick={MudarValor}> Clique aqui para mudar o valor </button>
 
+    <br></br>
+
+    {hide && "texto hide true"}<br/>
+    {!hide && "texto hide não true"}<br/>
+    {!hide ?"se o hide estiver true" : "se o hide não estiver true"}<br/>
+    {!hide ?"se o hide estiver false" : "se o hide não estiver false"}<br/>
+    <button onClick={()=>setHide(!hide)}> Inverter hide</button>   
     <Ex1/>
 
     <EX2/>

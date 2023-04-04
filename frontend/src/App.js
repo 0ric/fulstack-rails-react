@@ -3,6 +3,7 @@ import EX2 from "./exemplos/ArrowFunction"
 import Props from "./exemplos/props/Props";
 import PropsAbistrato from "./exemplos/props/PropsAbistrato";
 import {useState,useEffect} from 'react';
+import Botao from "./exemplos/Botao";
 
 function App(){
   const [hide,setHide] = useState(false);
@@ -33,6 +34,12 @@ return(
     <button onClick={MudarValor}> Clique aqui para mudar o valor </button>
 
     <br></br>
+  <Botao
+    cor='red'
+    tarefa={()=>console.log("cliquei")}
+    texto="clique para exibir no console"
+    />
+
 
     {hide && "texto hide true"}<br/>
     {!hide && "texto hide não true"}<br/>

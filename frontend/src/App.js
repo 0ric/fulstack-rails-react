@@ -12,7 +12,13 @@ function App() {
     },[])
 
     return (
-        <div>App</div>
+        <div>
+           {
+            Viagens.map(v=>
+                <h1>{v.nome}</h1>
+                ) 
+            }
+        </div>
     )
 }
 

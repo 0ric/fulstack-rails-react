@@ -47,7 +47,6 @@ return(
     {!hide ?"se o hide estiver false" : "se o hide não estiver false"}<br/>
     <button onClick={()=>setHide(!hide)}> Inverter hide</button>   
     <Ex1/>
-
     <EX2/>
 
     <Props numero="3" nome="ricardo" idade='21' />

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import {useState,useEffect} from 'react'
 import Form from './exemplos/components/Form';
-
+import Card from './exemplos/components/Card'
 function App() {
     const [Viagens,setViagens] = useState([]);
     const [travel,setTravel] = useState({ 
@@ -48,7 +48,10 @@ function App() {
         />
            {
             Viagens.map(v=>
-                <h1>{v.nome}</h1>
+                <Card
+                nome={v.nome}
+
+                />
                 ) 
             }
         </div>

@@ -40,7 +40,12 @@ function App() {
      }
     return (
         <div>
-        <Form/>
+        <Form
+            travel={travel}
+            setTravel={setTravel}
+            EnvioFormulario={EnvioFormulario}
+        
+        />
            {
             Viagens.map(v=>
                 <h1>{v.nome}</h1>

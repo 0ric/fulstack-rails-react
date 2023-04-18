@@ -1,4 +1,4 @@
-function Form() {
+function Form({travel,EnvioFormulario,setTravel}) {
     return (
         <form onSubmit={EnvioFormulario}>
         <label>Nome</label>

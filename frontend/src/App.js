@@ -22,6 +22,12 @@ function App() {
             .then(res=>{
                 console.log(res);
                 setViagens([...Viagens,res.data])
+                setTravel({
+                    nome: '',
+                    data: '',
+                    desc: '',
+                    price: 0
+                  })
             })
         
     
@@ -29,6 +35,7 @@ function App() {
     function EnvioFormulario(e){
         e.preventDefault()
         cadastrarViagem(travel)
+       
      }
     return (
         <div>

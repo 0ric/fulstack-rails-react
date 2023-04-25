@@ -29,10 +29,17 @@ function App() {
                     desc: '',
                     price: 0
                   })
-            })
-        
-    
+            })            
     } 
+    const deleteTravel = (id)=>{
+        axios.delete('http://localhost:8080/api/v1/travels/$/{id}')
+        .then(res=>{
+            console.log(res.data)
+        })
+        .catch (error=>console.error("erro ao deletar"))
+        }
+
+    
     function EnvioFormulario(e){
         e.preventDefault()
         cadastrarViagem(travel)
@@ -49,6 +56,7 @@ function App() {
            {
             Viagens.map(v=>
                 <Card
+                deletarViagem = {deleteTravel}
                 nome={v.nome}
 
                 />

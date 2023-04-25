@@ -5,11 +5,14 @@
     min-height: 340px;
     background-color: #0A0B0D;
     color: #9ABBD9;
-    border: 5px double #77A1D9;
+    border: 5px double #364A73;
     font-family: 'Bruno Ace', cursive;
     padding: 10px;
     margin: 10px;
     border-radius: 8px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card h1{
@@ -17,5 +20,5 @@
     font-size: 1.2rem;
 }
 .card:hover{
-    border: 5px double #0B38BF
+    border: 5px double #0B38BF;
 }

@@ -32,9 +32,10 @@ function App() {
             })            
     } 
     const deleteTravel = (id)=>{
-        axios.delete('http://localhost:8080/api/v1/travels/$/{id}')
+        axios.delete(`http://localhost:8080/api/v1/travels/${id}`)
         .then(res=>{
             console.log(res.data)
+            setViagens(Viagens.filter(v => v.id !==id))
         })
         .catch (error=>console.error("erro ao deletar"))
         }
@@ -58,7 +59,10 @@ function App() {
                 <Card
                 deletarViagem = {deleteTravel}
                 nome={v.nome}
-
+                id={v.id}
+                data={v.data} 
+                desc={v.desc}
+                price={v.price}
                 />
                 ) 
             }

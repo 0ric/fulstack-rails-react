@@ -39,13 +39,13 @@ function App() {
        
      }
     return (
-        <div>
+            <div>
         <Form
             travel={travel}
             setTravel={setTravel}
             EnvioFormulario={EnvioFormulario}
-        
         />
+        <div className='cards'>
            {
             Viagens.map(v=>
                 <Card
@@ -54,6 +54,7 @@ function App() {
                 />
                 ) 
             }
+            </div>
         </div>
     )
 }

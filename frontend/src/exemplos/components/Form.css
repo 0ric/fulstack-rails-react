@@ -29,6 +29,6 @@ font-weight: 700;
 }
 .divForm form button:hover{
     cursor: pointer;
-    box-shadow: cyan -2px 0px 10px 5px;
+    box-shadow: rgb(255, 27, 27) -2px 0px 10px 5px;
 
 }

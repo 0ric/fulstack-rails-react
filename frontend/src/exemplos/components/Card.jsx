@@ -1,7 +1,9 @@
+import "./Card.css"
+
 function Card(props) {
 return (
-    <div>
-        {props.nome}
+    <div className="card">
+        <h1>{props.nome}</h1>
     </div>
 )
 }

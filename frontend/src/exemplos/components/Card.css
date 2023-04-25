@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+
+.card{
+    width: 256px;
+    min-height: 340px;
+    background-color: #0A0B0D;
+    color: #9ABBD9;
+    border: 5px double #77A1D9;
+    font-family: 'Bruno Ace', cursive;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.card h1{
+    color: #3671BF;
+    font-size: 1.2rem;
+}
+.card:hover{
+    border: 5px double #0B38BF
+}

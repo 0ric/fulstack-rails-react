@@ -57,6 +57,7 @@ function App() {
            {
             Viagens.map(v=>
                 <Card
+                key={v.id}
                 deletarViagem = {deleteTravel}
                 nome={v.nome}
                 id={v.id}

@@ -20,5 +20,9 @@
     font-size: 1.2rem;
 }
 .card:hover{
-    border: 5px double #0B38BF;
+    border: 7px double #0B38BF;
+    box-shadow: rgb(255, 27, 27) -2px 0px 10px 5px;
+}
+.btns:hover{
+    cursor: pointer;
 }

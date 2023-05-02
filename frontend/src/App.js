@@ -1,7 +1,7 @@
 import axios from 'axios'
 import {useState,useEffect} from 'react'
-import Form from './exemplos/components/Form';
-import Card from './exemplos/components/Card'
+import Form from './components/Form';
+import Card from './components/Card';
 function App() {
     const [Viagens,setViagens] = useState([]);
     const [travel,setTravel] = useState({ 

@@ -23,7 +23,7 @@
     font-size: 1.2rem;
     }   
 .card h1:hover{
- color: red
+ color: rgb(115, 171, 255)
 }
 .card:hover{
     border: 5px double #0B38BF;

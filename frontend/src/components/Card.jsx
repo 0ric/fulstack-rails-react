@@ -7,6 +7,7 @@ function Card(props) {
     const dataFormatada =FormatarData(data);
     const setEditing = () =>{
         props.setEditID(id)
+        props.acharViagem(id)
     }
     const deleteMode= () =>{
         props.deletarViagem(id)

@@ -46,11 +46,17 @@ function App() {
         cadastrarViagem(travel)
        
      }
+     const [viagemAtual,setViagemAtual] = useState([])
+     function acharViagem(id){
+        setViagemAtual(Viagens.filter(v => v.id === id)[0])
+     }
     return (
             <div>
         <Form
             id={editID}
+        
             travel={travel}
+            viagemAtual={viagemAtual}
             setTravel={setTravel}
             EnvioFormulario={EnvioFormulario}
         />
@@ -59,6 +65,7 @@ function App() {
             Viagens.map(v=>
                 <Card
                 key={v.id}
+                acharViagem={acharViagem}
                 deletarViagem = {deleteTravel}
                 nome={v.nome}
                 id={v.id}

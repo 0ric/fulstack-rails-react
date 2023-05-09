@@ -26,8 +26,8 @@
  color: rgb(115, 171, 255)
 }
 .card:hover{
-    border: 5px double #0B38BF;
-    box-shadow: rgb(35, 26, 87) -2px 0px 10px 5px;
+    border: 6px double #0B38BF;
+    box-shadow: rgb(35, 26, 87) -2px 0px 15px 10px;
     transform: scale(1.1);
     text-decoration: underline;
     border-color: #6565c5;

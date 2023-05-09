@@ -1,6 +1,7 @@
 import './Form.css'
 
 function Form({travel,EnvioFormulario,setTravel}) {
+    
     return (
         <div className='divForm'>
         <form onSubmit={EnvioFormulario}>

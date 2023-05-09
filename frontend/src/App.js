@@ -49,6 +49,12 @@ function App() {
      const [viagemAtual,setViagemAtual] = useState([])
      function acharViagem(id){
         setViagemAtual(Viagens.filter(v => v.id === id)[0])
+        setTravel({
+            nome: viagemAtual.nome,
+            data: viagemAtual.travel,
+            desc: viagemAtual.desc,
+            price: viagemAtual.price
+        })
      }
     return (
             <div>

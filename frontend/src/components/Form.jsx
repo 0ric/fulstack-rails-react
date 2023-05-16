@@ -2,9 +2,6 @@ import './Form.css'
 
 function Form({travel,EnvioFormulario,setTravel,id}) {
 
-    if(id){
-       console.log(id)
-    }
     return (
         <div className='divForm'>
         <form onSubmit={EnvioFormulario}>

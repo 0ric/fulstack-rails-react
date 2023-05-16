@@ -43,6 +43,16 @@ function App() {
     
     function EnvioFormulario(e){
         e.preventDefault()
+        if(editID !== -1){
+            console.log("era pra estar editando")
+            setEditID(-1)
+            setTravel({            nome: '',
+            data: '',
+            desc: '',
+            price: 0
+        })
+            return
+        }
         cadastrarViagem(travel)
        
      }

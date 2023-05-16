@@ -40,13 +40,18 @@ function App() {
         .catch (error=>console.error("erro ao deletar"))
         }
 
-    
+    const editTravel = (id,travel)=>{
+        axios.put(`http://localhost:8080/api/v1/travels/${id}`,{travel})
+        .then(res=>console.log(res))
+        .catch(erro=>console.log("erro ao atualizar"))
+    }
     function EnvioFormulario(e){
         e.preventDefault()
         if(editID !== -1){
-            console.log("era pra estar editando")
+            editTravel(editID,travel)
             setEditID(-1)
-            setTravel({            nome: '',
+            setTravel({            
+            nome: '',
             data: '',
             desc: '',
             price: 0

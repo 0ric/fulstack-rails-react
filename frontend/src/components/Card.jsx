@@ -8,7 +8,7 @@ function Card(props) {
     const setEditing = () =>{
         props.setTravel({
             nome: props.nome,
-            data: data,
+            data: data.slice(0, 16),
             desc: desc,
             price: price
         })
@@ -25,7 +25,10 @@ return (
                 <p>{desc}</p>
                 <p>{dataFormatada}</p>
                 <p>R${price},00</p>
-                <div onClick={()=>(deleteMode)}>                    <TbTrashX size={32}/>
+                <div 
+                    onClick={()=>deleteMode()} 
+                >                
+                    <TbTrashX size={32}/>
                 </div>
                 <div onClick={()=>setEditing(id)}>
                     <FaEdit size={32}/>

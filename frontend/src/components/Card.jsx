@@ -6,8 +6,13 @@ function Card(props) {
     const {id,data,desc,price} = props
     const dataFormatada =FormatarData(data);
     const setEditing = () =>{
+        props.setTravel({
+            nome: props.nome,
+            data: data,
+            desc: desc,
+            price: price
+        })
         props.setEditID(id)
-        props.acharViagem(id)
     }
     const deleteMode= () =>{
         props.deletarViagem(id)

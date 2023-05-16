@@ -10,7 +10,7 @@ function App() {
         desc: '',
         price: 0
     })
-    const [editID,setEditID] = useState(null);
+    const [editID,setEditID] = useState(-1);
     useEffect(()=>{
         axios.get("http://localhost:8080/api/v1/travels")
             .then(res=>setViagens(res.data))
@@ -46,14 +46,14 @@ function App() {
         cadastrarViagem(travel)
        
      }
-     const [viagemAtual,setViagemAtual] = useState([])
+
      function acharViagem(id){
-        setViagemAtual(Viagens.filter(v => v.id === id)[0])
+        let ViagemAtual = Viagens.filter(v => v.id === id)[0]
         setTravel({
-            nome: viagemAtual.nome,
-            data: viagemAtual.travel,
-            desc: viagemAtual.desc,
-            price: viagemAtual.price
+            nome: ViagemAtual.nome,
+            data: ViagemAtual.travel,
+            desc: ViagemAtual.desc,
+            price: ViagemAtual.price
         })
      }
     return (
@@ -62,7 +62,6 @@ function App() {
             id={editID}
         
             travel={travel}
-            viagemAtual={viagemAtual}
             setTravel={setTravel}
             EnvioFormulario={EnvioFormulario}
         />
@@ -71,9 +70,9 @@ function App() {
             Viagens.map(v=>
                 <Card
                 key={v.id}
-                acharViagem={acharViagem}
                 deletarViagem = {deleteTravel}
                 nome={v.nome}
+                setTravel={setTravel}
                 id={v.id}
                 data={v.data} 
                 desc={v.desc}

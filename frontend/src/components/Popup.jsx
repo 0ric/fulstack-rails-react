@@ -1,8 +1,10 @@
 import React from 'react'
 import './Popup.css'
-function Popup(){
+function Popup({message,color}){
     return (
-        <div className='popup'>Popup</div>
+        <div className={`popup ${color}`}>
+           {message}
+        </div>
 
     )
 }

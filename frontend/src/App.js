@@ -11,7 +11,16 @@ function App() {
         desc: '',
         price: 0
     })
+    const[showPopup,setShowPopup] = useState(false);
     const [editID,setEditID] = useState(-1);
+    const [popupContent,setPopupContent] = useState({message: '',color: ''})
+
+    function showAndHidePopup(){
+        setShowPopup(true);
+        setTimeout(()=>{
+            setShowPopup(false);
+        },3500)
+    }
     useEffect(()=>{
         axios.get("http://localhost:8080/api/v1/travels")
             .then(res=>setViagens(res.data))
@@ -106,9 +115,13 @@ function App() {
                 />
                 ) 
             }
-
-
-            <Popup/>
+                    {
+                    showPopup?
+                     <Popup
+                         message={popupContent.message}
+                         color={popupContent.color}
+                    />: null
+                    } 
             </div>
         </div>
     )

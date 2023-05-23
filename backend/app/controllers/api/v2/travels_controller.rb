@@ -35,6 +35,6 @@ class Api::V2::TravelsController < ApplicationController
 
   private
     def travel_params
-      params.require(:travel).permit( :nome, :data, :price, :desc)
+      params.require(:travel).permit( :nome, :data, :price, :desc,:image)
     end
 end

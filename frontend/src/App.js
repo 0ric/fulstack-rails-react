@@ -39,16 +39,42 @@ function App() {
                     desc: '',
                     price: 0
                   })
+                  setPopupContent({
+                    message: 'Card Cadastrado com Sucesso',
+                    color: 'sucess'
+                })
+                showAndHidePopup()
             })            
+        .catch (error=>{
+            console.error("erro ao cadastrar")
+            setPopupContent({
+                message: 'Erro ao cadastrar viagem',
+                color: 'Warning'
+            })
+            showAndHidePopup()
+
+        })
     } 
     const deleteTravel = (id)=>{
         axios.delete(`http://localhost:8080/api/v1/travels/${id}`)
         .then(res=>{
             console.log(res.data)
             setViagens(Viagens.filter(v => v.id !==id))
+            setPopupContent({
+                message: 'Card Deletado com Sucesso',
+                color: 'sucess'
+            })
+            showAndHidePopup()
         })
-        .catch (error=>console.error("erro ao deletar"))
-        }
+        .catch (error=>{
+            console.error("erro ao deletar")
+            setPopupContent({
+                message: 'Não foi possivel deletar',
+                color: 'warning'
+            })
+            showAndHidePopup()
+         })
+    }
 
     const editTravel = (id,travel)=>{
         axios.put(`http://localhost:8080/api/v1/travels/${id}`,{travel})
@@ -60,8 +86,18 @@ function App() {
                 return v
             })
             setViagens(newListaDeViagens)
+            setPopupContent({
+                message: 'Card Editada com Sucesso',
+                color: 'sucess'
+            })
+            showAndHidePopup()
         })
         .catch(erro=>console.log("erro ao atualizar"))
+        setPopupContent({
+            message: 'Não foi possivel editar',
+            color: 'warning'
+        })
+        showAndHidePopup()
     }
     function EnvioFormulario(e){
         e.preventDefault()

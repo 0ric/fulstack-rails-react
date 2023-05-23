@@ -6,8 +6,8 @@ Rails.application.routes.draw do
     namespace :v1 do
         resources :travels
     end
-  end
-  namespace :v2 do
-    resources :travels
+    namespace :v2 do
+      resources :travels
+    end
   end
 end

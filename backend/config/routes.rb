@@ -7,5 +7,7 @@ Rails.application.routes.draw do
         resources :travels
     end
   end
-
+  namespace :v2 do
+    resources :travels
+  end
 end

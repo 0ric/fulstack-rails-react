@@ -1,7 +1,11 @@
 class Api::V2::TravelsController < ApplicationController
   def index
     @travels = Travel.all
-    render json: @travels
+    
+    serialized_travels = @travels.map do |travel|
+      TravelSerializer.new(travel).serializable_hash[:data][:attributes]
+    end
+    render json: serialized_travels
   end
 
   def show

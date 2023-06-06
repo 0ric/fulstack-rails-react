@@ -25,6 +25,11 @@ return (
                 <p>{desc}</p>
                 <p>{dataFormatada}</p>
                 <p>R${price},00</p>
+                    <img
+                        src={props.image_url}
+                        alt={props.nome}
+                        className="imageViagem"
+                    />
                 <div 
                     onClick={()=>deleteMode()} 
                 >                

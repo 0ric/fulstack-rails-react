@@ -9,7 +9,8 @@ function App() {
         nome: '',
         data: '',
         desc: '',
-        price: 0
+        price: 0,
+        image:null
     })
     const[showPopup,setShowPopup] = useState(false);
     const [editID,setEditID] = useState(-1);
@@ -28,8 +29,12 @@ function App() {
 
     },[])
 
-    const cadastrarViagem=(travel)=>{
-        axios.post("http://localhost:8080/api/v2/travels",{travel})
+    const cadastrarViagem=(formData)=>{
+        axios.post("http://localhost:8080/api/v2/travels",formData,{
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            },
+        })
             .then(res=>{
                 console.log(res);
                 setViagens([...Viagens,res.data])
@@ -37,7 +42,8 @@ function App() {
                     nome: '',
                     data: '',
                     desc: '',
-                    price: 0
+                    price: 0,
+                    image: null
                   })
                   setPopupContent({
                     message: 'Card Cadastrado com Sucesso',
@@ -112,7 +118,13 @@ function App() {
         })
             return
         }
-        cadastrarViagem(travel)
+        const formData = new FormData();
+        formData.append('travel[image]',travel.image);
+        formData.append('travel[nome]',travel.nome);
+        formData.append('travel[desc]',travel.desc);
+        formData.append('travel[price]',travel.price);
+        formData.append('travel[data]',travel.data);
+        cadastrarViagem(formData)
        
      }
 
@@ -146,6 +158,7 @@ function App() {
                 data={v.data} 
                 desc={v.desc}
                 price={v.price}
+                image_url={v.image_url}
                 setEditID={setEditID}
                 
                 />
